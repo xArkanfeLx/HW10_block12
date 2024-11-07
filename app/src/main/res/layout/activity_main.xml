@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarTB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/purple"
+        android:theme="@style/Theme.AppCompat.NoActionBar"
+        app:title="Инофрмация о продукте"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_weight="10"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgIV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="75"
+                android:src="@drawable/person_default_icon" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="25"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/nameET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:hint="Имя" />
+
+                <EditText
+                    android:id="@+id/familyET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:hint="Фамилия" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/dateET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="Дата рождения"
+            android:inputType="date"
+            android:textSize="16dp" />
+
+
+        <Button
+            android:id="@+id/saveBTN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Сохранить" />
+    </LinearLayout>
+</LinearLayout>

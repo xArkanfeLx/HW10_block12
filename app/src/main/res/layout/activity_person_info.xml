@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PersonInfoActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarTB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/purple"
+        android:theme="@style/Theme.AppCompat.NoActionBar"
+        app:title="Инофрмация о человеке"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgIV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="40"
+            android:src="@drawable/person_default_icon" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="60"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nameTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="50"
+                android:hint="Имя"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/familyTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="50"
+                android:hint="Фамилия"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/yearTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="50"
+                android:hint="Возраст"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/birthdayTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="50"
+                android:hint="До ДР"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
